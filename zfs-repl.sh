@@ -44,7 +44,7 @@ else
 	echo -n $ps_id > "$lock_file"
 fi
 
-ZFS="$(which zfs)"
+ZFS="/sbin/zfs"
 
 SourceFileSystem="$(cat $CONFIGFILE | grep ^'SourceFS=' | awk -F'=' '{print $2}' | tr -d '"')"
 TargetFileSystem="$(cat $CONFIGFILE | grep ^'TargetFS=' | awk -F'=' '{print $2}' | tr -d '"')"
